@@ -1,0 +1,110 @@
+/** Variables **/
+
+$title-font: "Comfortaa", cursive;
+$title-col: #7a60bc;
+$title-hov: #a48ce0;
+
+/*** Responsive Template ***/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+/** General **/
+
+ul {
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  font: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/** General - Responsive **/
+
+.app-wrapper {
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 85%;
+    margin: auto;
+  }
+}
+
+/** Navbar **/
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  font-family: $title-font;
+  font-weight: 700;
+  color: $title-col;
+  background-color: rgb(251, 243, 255);
+
+  .left-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      font-size: 3rem;
+      padding: 0 2rem;
+    }
+    .logo:hover {
+      color: $title-hov;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    padding: 0 1rem;
+    .nav-item {
+      padding: 0 2rem;
+    }
+    .nav-item:hover {
+      color: $title-hov;
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  @media only screen and (min-width: 1024px) {
+    height: 8rem;
+  }
+}
+
+/** Hero **/
+
+.hero-container {
+  background-color: rgb(246, 228, 255);
+  height: 50rem;
+}
