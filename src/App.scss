@@ -1,8 +1,22 @@
 /** Variables **/
 
+$pale-green: #e9f1b2;
+$light-pale-green: #f0f4d3;
+$med-green: #bcc776;
+$dark-med-green: #a3af4e;
+
+$light-brown: #9f7f62;
+$dark-brown: #8f6d4c;
+
+$light-pale-yellow: #fef7e6;
+$pale-yellow: #ffeec4;
+
+$med-gray: #a4a4a4;
+$dark-med-gray: #8b8b8b;
+
 $title-font: "Comfortaa", cursive;
-$title-col: #7a60bc;
-$title-hov: #a48ce0;
+$title-col: $light-brown;
+$title-hov: $dark-brown;
 
 /*** Responsive Template ***/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -15,6 +29,13 @@ $title-hov: #a48ce0;
 }
 
 /** General **/
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $title-font;
+}
 
 ul {
   list-style-type: none;
@@ -40,19 +61,11 @@ button {
 
 /** General - Responsive **/
 
-.app-wrapper {
-  @media only screen and (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
-  }
+/** Reusable **/
 
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    width: 100%;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    width: 85%;
-    margin: auto;
-  }
+button {
+  background-color: $title-col;
+  color: $light-pale-yellow;
 }
 
 /** Navbar **/
@@ -65,7 +78,8 @@ button {
   font-family: $title-font;
   font-weight: 700;
   color: $title-col;
-  background-color: rgb(251, 243, 255);
+  // background-color: $light-pale-yellow;
+  background-color: rgb(254, 247, 230, 0.8);
 
   .left-nav {
     display: flex;
@@ -99,12 +113,75 @@ button {
 
   @media only screen and (min-width: 1024px) {
     height: 8rem;
+
+    position: sticky;
+    top: 0;
+
+    .left-nav {
+      margin-left: 7.5%;
+    }
+    .right-nav {
+      margin-right: 7.5%;
+    }
   }
 }
 
 /** Hero **/
 
 .hero-container {
-  background-color: rgb(246, 228, 255);
+  height: 50rem;
+  margin: auto;
+
+  font-family: $title-font;
+
+  background-color: $light-pale-yellow;
+
+  .hero-banner {
+    width: 50rem;
+  }
+  .banner-button {
+    height: 5rem;
+    width: 18rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .banner-button:hover {
+    background-color: $title-hov;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  @media only screen and (min-width: 1024px) {
+    background-image: url("./assets/banner-overlay.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 110% 50%;
+
+    .hero-banner {
+      display: none;
+    }
+    .hero-text {
+      text-align: center;
+      transform: translate(-15rem, 15rem);
+      line-height: 4rem;
+      h1 {
+        font-size: 4rem;
+        color: $title-hov;
+      }
+      p {
+        font-size: 1.5rem;
+        color: $title-col;
+      }
+    }
+  }
+}
+
+/** About **/
+
+.about-container {
   height: 50rem;
 }
