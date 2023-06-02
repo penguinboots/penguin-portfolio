@@ -19,6 +19,10 @@ dd {
   margin: 0;
 }
 
+body {
+  background-color: #fef7e6;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
@@ -40,13 +44,6 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
