@@ -1,6 +1,9 @@
 import { Link } from "react-scroll";
 import { Squash as Hamburger } from "hamburger-react";
-import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
+import { convertRemToPixels } from "../utils/helpers";
 
 export default function Navbar(props) {
   Navbar.propTypes = {
@@ -10,11 +13,6 @@ export default function Navbar(props) {
 
   const { isOpen, toggleMenu } = props;
 
-  function convertRemToPixels(rem) {
-    return (
-      rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
-    );
-  }
   return (
     <nav className="nav-bar">
       <div className="left-nav">
@@ -69,6 +67,7 @@ export default function Navbar(props) {
               target="_blank"
             >
               Resume
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </a>
           </li>
         </ul>

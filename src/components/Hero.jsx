@@ -1,5 +1,6 @@
 import bannerOverlay from "../assets/banner-overlay.png";
 import { Link } from "react-scroll";
+import { convertRemToPixels } from "../utils/helpers";
 
 export default function Hero() {
   return (
@@ -13,6 +14,7 @@ export default function Hero() {
           spy={true}
           smooth={true}
           duration={500}
+          offset={-convertRemToPixels(8)}
         >
           See My Stuff!
         </Link>

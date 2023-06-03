@@ -1,17 +1,14 @@
-import PropTypes from "prop-types";
 import { Link } from "react-scroll";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
+import { convertRemToPixels } from "../utils/helpers";
 
 export default function Menu(props) {
   const { isOpen } = props;
   Menu.propTypes = {
     isOpen: PropTypes.bool,
   };
-
-  function convertRemToPixels(rem) {
-    return (
-      rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
-    );
-  }
 
   return (
     <div
@@ -55,7 +52,7 @@ export default function Menu(props) {
             Contact
           </Link>
         </li>
-        <hr/>
+        <hr />
         <li className="nav-item">
           <a
             href="https://flowcv.com/resume/7vgjugqk7r"
@@ -63,6 +60,7 @@ export default function Menu(props) {
             target="_blank"
           >
             Resume
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         </li>
       </ul>
