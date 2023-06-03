@@ -7,8 +7,14 @@ export default function Hero() {
       <div className="hero-text">
         <h1>Hi! I&#39;m Sabrina.</h1>
         <p>Welcome to my portfolio!</p>
-        <Link to="about-container" spy={true} smooth={true} duration={500}>
-          <button className="banner-button">See My Stuff!</button>
+        <Link
+          className="banner-button"
+          to="about-container"
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
+          See My Stuff!
         </Link>
       </div>
       <img className="hero-banner" src={bannerOverlay} />

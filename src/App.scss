@@ -11,12 +11,14 @@ $dark-brown: #8f6d4c;
 $light-pale-yellow: #fef7e6;
 $pale-yellow: #ffeec4;
 
+$very-light-gray: #eaeae8;
+$light-gray: #cecece;
 $med-gray: #a4a4a4;
 $dark-med-gray: #8b8b8b;
 
 $title-font: "Comfortaa", cursive;
-$title-col: $light-brown;
-$title-hov: $dark-brown;
+$main-accent: $light-brown;
+$accent-hover: $dark-brown;
 
 /*** Responsive Template ***/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -59,16 +61,16 @@ button {
   cursor: pointer;
 }
 
-/** General - Responsive **/
+/**** General - Responsive ****/
 
-/** Reusable **/
+/**** Reusable ****/
 
 button {
-  background-color: $title-col;
+  background-color: $main-accent;
   color: $light-pale-yellow;
 }
 
-/** Navbar **/
+/**** Navbar ****/
 
 .nav-bar {
   display: flex;
@@ -77,21 +79,19 @@ button {
   margin: auto;
   font-family: $title-font;
   font-weight: 700;
-  color: $title-col;
-  // background-color: $light-pale-yellow;
+  color: $main-accent;
   background-color: rgb(254, 247, 230, 0.8);
 
   .left-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-
     .logo {
       font-size: 3rem;
       padding: 0 2rem;
     }
     .logo:hover {
-      color: $title-hov;
+      color: $accent-hover;
     }
   }
 
@@ -100,9 +100,13 @@ button {
     padding: 0 1rem;
     .nav-item {
       padding: 0 2rem;
+      font-size: 1.3rem;
     }
     .nav-item:hover {
-      color: $title-hov;
+      color: $accent-hover;
+    }
+    .nav-divider {
+      font-size: 1.3rem;
     }
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -140,14 +144,19 @@ button {
     width: 50rem;
   }
   .banner-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 5rem;
     width: 18rem;
     border-radius: 3rem;
     font-weight: 700;
     font-size: 2rem;
+    background-color: $main-accent;
+    color: $light-pale-yellow;
   }
   .banner-button:hover {
-    background-color: $title-hov;
+    background-color: $accent-hover;
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
   }
@@ -165,16 +174,23 @@ button {
       display: none;
     }
     .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      transform: translate(-15rem, 15rem);
+      width: 45rem;
+      transform: translate(15rem, 15rem);
       line-height: 4rem;
       h1 {
         font-size: 4rem;
-        color: $title-hov;
+        color: $accent-hover;
       }
       p {
         font-size: 1.5rem;
-        color: $title-col;
+        color: $main-accent;
+      }
+      .banner-button {
+
       }
     }
   }
