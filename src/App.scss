@@ -10,6 +10,7 @@ $dark-brown: #8f6d4c;
 
 $light-pale-yellow: #fef7e6;
 $pale-yellow: #ffeec4;
+$dark-yellow: #ebd3a8;
 
 $very-light-gray: #eaeae8;
 $light-gray: #cecece;
@@ -63,6 +64,18 @@ button {
 
 /**** General - Responsive ****/
 
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1024px) {
+  section {
+    height: 50rem;
+  }
+}
+
 /**** Reusable ****/
 
 button {
@@ -73,6 +86,7 @@ button {
 /**** Navbar ****/
 
 .nav-bar {
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,6 +124,9 @@ button {
     }
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .right-nav {
+      display: none;
+    }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -133,13 +150,22 @@ button {
 /** Hero **/
 
 .hero-container {
-  height: 50rem;
   margin: auto;
-
   font-family: $title-font;
-
-  background-color: $light-pale-yellow;
-
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1 {
+      font-size: 4rem;
+      color: $accent-hover;
+    }
+    p {
+      font-size: 1.5rem;
+      color: $main-accent;
+    }
+  }
   .hero-banner {
     width: 50rem;
   }
@@ -159,39 +185,69 @@ button {
     background-color: $accent-hover;
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .hero-text {
+      position: relative;
+      top: 4rem;
+      line-height: 3.5rem;
+      h1 {
+        font-size: 4rem;
+      }
+    }
+    .hero-banner {
+      position: relative;
+      width: 150%;
+      left: -20%;
+    }
+    .banner-button {
+      display: none;
+    }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    .banner-button {
+      display: none;
+    }
   }
 
   @media only screen and (min-width: 1024px) {
     background-image: url("./assets/banner-overlay.png");
-    background-size: 60%;
     background-repeat: no-repeat;
-    background-position: 110% 50%;
-
     .hero-banner {
       display: none;
     }
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      width: 45rem;
-      transform: translate(15rem, 15rem);
-      line-height: 4rem;
-      h1 {
-        font-size: 4rem;
-        color: $accent-hover;
-      }
-      p {
-        font-size: 1.5rem;
-        color: $main-accent;
-      }
-      .banner-button {
 
-      }
+    height: 42rem;
+    background-position: 100% 0%;
+    background-size: 800px;
+    .hero-text {
+      position: relative;
+      width: 45rem;
+      top: 25%;
+      left: 5%;
+      line-height: 4rem;
+    }
+  }
+  @media only screen and (min-width: 1300px) and (max-width: 1439px) {
+    height: 42rem;
+    background-position: 100% 50%;
+    background-size: 900px;
+    .hero-text {
+      top: 25%;
+      left: 5%;
+    }
+  }
+  @media only screen and (min-width: 1440px) {
+    background-position: 105% 100%;
+    background-size: 1100px;
+    height: 50rem;
+    .hero-text {
+      top: 30%;
+      left: 5%;
     }
   }
 }
@@ -199,5 +255,5 @@ button {
 /** About **/
 
 .about-container {
-  height: 50rem;
+  background-color: $dark-yellow;
 }
