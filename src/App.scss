@@ -25,10 +25,10 @@ $accent-hover: $dark-brown;
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
 }
 
 /**** General ****/
@@ -70,13 +70,13 @@ button {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   section {
     height: 50rem;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   section {
     height: 50rem;
   }
@@ -131,6 +131,10 @@ button {
     .nav-divider {
       font-size: 1.3rem;
     }
+    svg {
+      width: 0.7rem;
+      padding-left: 0.2rem;
+    }
   }
 
   .hamburger-react {
@@ -146,15 +150,14 @@ button {
       display: block;
     }
   }
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
     padding-top: 1rem;
     height: 8rem;
     .logo {
       padding-left: 2rem;
     }
-
   }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1025px) {
     height: 8rem;
     .left-nav {
       margin-left: 7.5%;
@@ -219,6 +222,10 @@ button {
   li:hover {
     color: white;
   }
+  svg {
+    width: 1rem;
+    padding-left: 0.5rem;
+  }
 }
 
 /**** Hero ****/
@@ -280,15 +287,28 @@ button {
     }
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    .hero-text {
+      position: relative;
+      top: 6rem;
+      line-height: 3.5rem;
+      h1 {
+        font-size: 4rem;
+      }
+    }
+    .hero-banner {
+      width: 90%;
+      margin: auto;
+    }
     .banner-button {
       display: none;
     }
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1025px) {
     background-image: url("./assets/banner-overlay.png");
     background-repeat: no-repeat;
     .hero-banner {
