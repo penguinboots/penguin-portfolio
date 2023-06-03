@@ -1,4 +1,4 @@
-/** Variables **/
+/**** Variables ****/
 
 $pale-green: #e9f1b2;
 $light-pale-green: #f0f4d3;
@@ -21,7 +21,7 @@ $title-font: "Comfortaa", cursive;
 $main-accent: $light-brown;
 $accent-hover: $dark-brown;
 
-/*** Responsive Template ***/
+/**** Responsive Template ****/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 }
 
@@ -31,7 +31,7 @@ $accent-hover: $dark-brown;
 @media only screen and (min-width: 1024px) {
 }
 
-/** General **/
+/**** General ****/
 
 h1,
 h2,
@@ -65,9 +65,15 @@ button {
 /**** General - Responsive ****/
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+  section {
+    height: 42rem;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  section {
+    height: 50rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -96,13 +102,16 @@ button {
   color: $main-accent;
   background-color: rgb(254, 247, 230, 0.8);
 
+  position: sticky;
+  top: 0;
+
   .left-nav {
     display: flex;
     align-items: center;
     justify-content: center;
     .logo {
       font-size: 3rem;
-      padding: 0 2rem;
+      padding-top: 0.3rem;
     }
     .logo:hover {
       color: $accent-hover;
@@ -123,21 +132,30 @@ button {
       font-size: 1.3rem;
     }
   }
+
+  .hamburger-react {
+    display: none;
+  }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
-    .right-nav {
+    padding: 0.5rem 2rem;
+    height: 6rem;
+    .nav-links {
       display: none;
     }
+    .hamburger-react {
+      display: block;
+    }
   }
-
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  }
+    padding-top: 1rem;
+    height: 8rem;
+    .logo {
+      padding-left: 2rem;
+    }
 
+  }
   @media only screen and (min-width: 1024px) {
     height: 8rem;
-
-    position: sticky;
-    top: 0;
-
     .left-nav {
       margin-left: 7.5%;
     }
@@ -147,7 +165,63 @@ button {
   }
 }
 
-/** Hero **/
+/**** Hamburger Menu ****/
+
+.menu-window-active {
+  height: 29rem;
+  transition: ease height 1s;
+  margin-top: 3rem;
+  overflow: hidden;
+}
+
+.menu-window-inactive {
+  height: 0;
+  overflow: hidden;
+  transition: ease height 1s;
+}
+
+.menu-window {
+  visibility: hidden;
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    visibility: visible;
+  }
+  font-family: $title-font;
+  font-size: 2rem;
+  font-weight: 700;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 70%;
+  margin: auto;
+  background-color: $dark-brown;
+  color: $light-pale-yellow;
+  border-radius: 0.6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    padding: 1.2rem;
+    hr {
+      width: 100%;
+      border-top: 2px solid $light-pale-yellow;
+    }
+  }
+  li {
+    padding: 1.2rem 0rem;
+    text-align: center;
+  }
+  li:hover {
+    color: white;
+  }
+}
+
+/**** Hero ****/
 
 .hero-container {
   margin: auto;
@@ -252,7 +326,7 @@ button {
   }
 }
 
-/** About **/
+/**** About ****/
 
 .about-container {
   background-color: $dark-yellow;

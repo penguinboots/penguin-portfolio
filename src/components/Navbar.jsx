@@ -1,5 +1,15 @@
 import { Link } from "react-scroll";
-export default function Navbar() {
+import { Squash as Hamburger } from "hamburger-react";
+import PropTypes from 'prop-types';
+
+export default function Navbar(props) {
+  Navbar.propTypes = {
+    isOpen: PropTypes.bool,
+    toggleMenu: PropTypes.func,
+  };
+
+  const { isOpen, toggleMenu } = props;
+
   function convertRemToPixels(rem) {
     return (
       rem * parseFloat(getComputedStyle(document.documentElement).fontSize)
@@ -62,6 +72,7 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
+        <Hamburger toggled={isOpen} toggle={toggleMenu} />
       </div>
     </nav>
   );
