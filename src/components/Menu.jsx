@@ -21,7 +21,7 @@ export default function Menu(props) {
       <ul className="menu-items">
         <li className="nav-item">
           <Link
-            to="about-container"
+            to="about-wrapper"
             spy={true}
             smooth={true}
             duration={500}
@@ -32,7 +32,7 @@ export default function Menu(props) {
         </li>
         <li className="nav-item">
           <Link
-            to="projects-container"
+            to="projects-wrapper"
             spy={true}
             smooth={true}
             duration={500}
