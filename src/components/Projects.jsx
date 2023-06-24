@@ -6,17 +6,16 @@ import {
   scheduler,
   bytes,
   tweeter,
-} from "../utils/projects";
+} from "/data/projects";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
-  portfolio,
   mimikyu,
   shortly,
+  bytes,
+  portfolio,
   jungle,
   scheduler,
-  bytes,
-  tweeter,
 ];
 
 export default function Projects() {
