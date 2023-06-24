@@ -18,6 +18,7 @@ $med-gray: #a4a4a4;
 $dark-med-gray: #8b8b8b;
 
 $title-font: "Comfortaa", cursive;
+$body-font: "Raleway", sans-serif;
 $main-accent: $light-brown;
 $accent-hover: $dark-brown;
 
@@ -62,23 +63,60 @@ button {
   cursor: pointer;
 }
 
+body {
+  font-family: $body-font;
+}
+
 /**** General - Responsive ****/
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  section {
-    height: 42rem;
+  .section-container {
+    margin: 2rem auto;
+    width: 85%;
+    height: 85%;
+    background-color: $light-pale-yellow;
+    border-radius: 2rem;
+    padding: 1rem;
+    h2 {
+      text-align: center;
+      margin: 1rem;
+      font-size: 2rem;
+    }
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  section {
-    height: 50rem;
+  .section-container {
+    margin: 2rem auto;
+    width: 85%;
+    height: 85%;
+    background-color: $light-pale-yellow;
+    border-radius: 2rem;
+    padding: 1rem;
+    h2 {
+      margin: 1rem;
+      font-size: 2rem;
+    }
   }
 }
 
 @media only screen and (min-width: 1025px) {
   section {
-    height: 50rem;
+    height: 52rem;
+    max-width: 2000px;
+    margin: auto;
+  }
+  .section-container {
+    margin: auto;
+    width: 85%;
+    height: 85%;
+    background-color: $light-pale-yellow;
+    border-radius: 4rem;
+    h2 {
+      margin: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+    }
   }
 }
 
@@ -91,19 +129,21 @@ button {
 
 /**** Navbar ****/
 
-.nav-bar {
+.nav-wrapper {
   z-index: 99;
+  color: $main-accent;
+  background-color: rgb(254, 247, 230, 0.8);
+  position: sticky;
+  top: 0;
+}
+
+.nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto;
   font-family: $title-font;
   font-weight: 700;
-  color: $main-accent;
-  background-color: rgb(254, 247, 230, 0.8);
-
-  position: sticky;
-  top: 0;
 
   .left-nav {
     display: flex;
@@ -166,6 +206,7 @@ button {
       margin-right: 7.5%;
     }
   }
+  max-width: 2000px;
 }
 
 /**** Hamburger Menu ****/
@@ -315,9 +356,10 @@ button {
       display: none;
     }
 
-    height: 42rem;
+    height: 44rem;
     background-position: 100% 0%;
     background-size: 800px;
+
     .hero-text {
       position: relative;
       width: 45rem;
@@ -348,6 +390,185 @@ button {
 
 /**** About ****/
 
-.about-container {
+.about-wrapper {
+  width: 100%;
   background-color: $dark-yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about {
+  display: flex;
+  color: $dark-brown;
+  padding: 1.5rem;
+  p {
+    margin: 1rem 0;
+    hyphens: auto;
+  }
+  .about-img {
+    border: 1px solid black;
+  }
+  .contact {
+    .contact-icon {
+      img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    flex-direction: column;
+    .about-img {
+      order: 0;
+      height: 12rem;
+    }
+    .about-text {
+      order: 2;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    .about-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .about-text {
+        order: 1;
+        width: 60%;
+        margin: 0 1rem;
+      }
+      .about-img {
+        order: 0;
+        height: 15rem;
+        width: 30%;
+        margin: 1rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    flex-direction: column;
+    align-items: center;
+    .about-body {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      .about-text {
+        order: 0;
+        width: 60%;
+        margin: 0 1rem;
+        font-size: 1.3rem;
+      }
+      .about-img {
+        order: 1;
+        height: 15rem;
+        width: 30%;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+/**** Projects ****/
+.projects-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.projects {
+  background-color: $dark-yellow;
+  padding: 1rem;
+  .projects-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $light-pale-yellow;
+    border-radius: 2rem;
+    .project-img {
+      border: 1px black solid;
+      height: 60%;
+      width: 100%;
+      border-radius: 0.3rem;
+      align-self: center;
+      margin-bottom: 0.8rem;
+    }
+    .title-box {
+      display: flex;
+      justify-content: space-between;
+      .links {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        color: $dark-med-green;
+        gap: 0.5rem;
+        font-weight: 700;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+    .stack {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+      li {
+        text-align: center;
+        font-size: 0.8rem;
+        background-color: $med-green;
+        width: 4.5rem;
+        border-radius: 0.6rem;
+        margin: 0 0.2rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .project-card {
+      height: 20rem;
+      margin: 0.5rem;
+      padding: 1.5rem;
+      .title-box {
+        flex-direction: column;
+      }
+      .stack {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        li {
+          width: 5.5rem;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  }
+
+  @media only screen and (min-width: 1025px) {
+    margin: 4rem;
+    .projects-list {
+      width: 90%;
+      margin: auto;
+    }
+    .project-card {
+      width: 25rem;
+      height: 25rem;
+      padding: 2rem;
+      margin: 1rem;
+    }
+  }
 }
