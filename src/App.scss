@@ -127,6 +127,12 @@ button {
   color: $light-pale-yellow;
 }
 
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /**** Navbar ****/
 
 .nav-wrapper {
@@ -410,11 +416,15 @@ button {
     border: 1px solid black;
   }
   .contact {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 3rem;
+    gap: 1rem;
     .contact-icon {
-      img {
-        width: 48px;
-        height: 48px;
-      }
+      display: flex;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 2.5rem;
     }
   }
   @media only screen and (min-width: 320px) and (max-width: 767px) {

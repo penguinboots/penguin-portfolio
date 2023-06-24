@@ -1,6 +1,5 @@
-import githubIcon from "../../public/github-mark.svg";
-import linkedinIcon from "../../public/linkedin.svg";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function About() {
   return (
@@ -23,16 +22,18 @@ export default function About() {
               extraordinary!
             </p>
           </div>
-          <div className="about-img">placeholder img</div>
+          <div className="placeholder about-img">{`< 🚧 Under Construction 🚧 >`}</div>
         </div>
         <ul className="contact">
           <li className="contact-icon">
-            <img src={githubIcon} />
+            <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/github/github-original.svg" />
           </li>
           <li className="contact-icon">
-            <img src={linkedinIcon} />
+            <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/linkedin/linkedin-original.svg" />
           </li>
-          <li className="contact-icon">EMAIL</li>
+          <li className="contact-icon">
+            <FontAwesomeIcon icon={faEnvelope} />
+          </li>
         </ul>
       </div>
     </section>
