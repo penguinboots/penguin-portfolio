@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 export default function ProjectCard(props) {
   const { project } = props;
 
@@ -21,7 +24,7 @@ export default function ProjectCard(props) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  LIVE
+                  LIVE <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </a>
               </li>
               <li>|</li>
@@ -31,7 +34,7 @@ export default function ProjectCard(props) {
           )}
           <li>
             <a href={project.repo} target="_blank" rel="noopener noreferrer">
-              REPO
+              REPO <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </a>
           </li>
         </ul>

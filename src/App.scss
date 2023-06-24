@@ -68,6 +68,10 @@ body {
   font-family: $body-font;
 }
 
+.section-container {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
 /**** General - Responsive ****/
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -422,7 +426,7 @@ button {
     }
     .contact {
       display: flex;
-      align-self: flex-start;
+      width: 100%;
       padding: 0;
       margin: 3rem 0;
       gap: 1rem;
@@ -449,6 +453,9 @@ button {
         order: 1;
         width: 90%;
       }
+      .contact {
+        justify-content: center;
+      }
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -465,6 +472,9 @@ button {
         width: 70%;
         margin: 1rem;
       }
+    }
+    .contact {
+      justify-content: center;
     }
   }
   @media only screen and (min-width: 1025px) {
@@ -508,6 +518,7 @@ button {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
   }
   .project-card {
     display: flex;
@@ -515,6 +526,7 @@ button {
     justify-content: flex-start;
     background-color: $light-pale-yellow;
     border-radius: 2rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     .project-img {
       height: 40%;
       min-height: 40%;
@@ -528,11 +540,20 @@ button {
       justify-content: space-between;
       .links {
         display: flex;
+        align-items: center;
         margin: 0;
         padding: 0;
         color: $dark-med-green;
         gap: 0.5rem;
         font-weight: 700;
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+        }
+        svg {
+          font-size: 0.7rem;
+        }
       }
       h3 {
         font-size: 1.2rem;
@@ -575,7 +596,8 @@ button {
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .project-card {
       height: 20rem;
-      width: 20rem;
+      min-width: 18rem;
+      width: 40%;
       margin: 0.5rem;
       padding: 1.5rem;
       .title-box {
