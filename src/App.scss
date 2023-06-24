@@ -39,6 +39,7 @@ h2,
 h3,
 h4 {
   font-family: $title-font;
+  color: $dark-brown;
 }
 
 ul {
@@ -131,6 +132,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid $dark-brown;
+  color: $dark-brown;
 }
 
 /**** Navbar ****/
@@ -408,7 +411,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $dark-brown;
   padding: 1.5rem;
   .about-body {
     display: flex;
@@ -417,9 +419,6 @@ button {
     p {
       margin: 1rem 0;
       hyphens: auto;
-    }
-    .about-img {
-      border: 1px solid black;
     }
     .contact {
       display: flex;
@@ -517,7 +516,6 @@ button {
     background-color: $light-pale-yellow;
     border-radius: 2rem;
     .project-img {
-      border: 1px black solid;
       height: 40%;
       min-height: 40%;
       width: 100%;
