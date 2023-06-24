@@ -1,5 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import iconGithub from "../icon_github.svg";
+import iconLinkedIn from "../icon_linkedin.svg";
+import iconMail from "../icon_mail.svg";
+
 
 export default function About() {
   return (
@@ -22,14 +24,20 @@ export default function About() {
               extraordinary!
             </p>
             <ul className="contact">
-              <li className="contact-icon">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/github/github-original.svg" />
+              <li>
+                <a href="https://github.com/penguinboots">
+                  <img src={iconGithub} alt="github icon" />
+                </a>
               </li>
-              <li className="contact-icon">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/linkedin/linkedin-original.svg" />
+              <li>
+                <a href="https://www.linkedin.com/in/sabrina-y-wang/">
+                  <img src={iconLinkedIn} />
+                </a>
               </li>
-              <li className="contact-icon">
-                <FontAwesomeIcon icon={faEnvelope} />
+              <li>
+                <a href="mailto: sabrina.ynw@gmail.com">
+                  <img src={iconMail} />
+                </a>
               </li>
             </ul>
           </div>

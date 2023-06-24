@@ -36,7 +36,7 @@ export default function ProjectCard(props) {
           </li>
         </ul>
       </div>
-      <p>{project.description}</p>
+      <p className="description">{project.description}</p>
       <ul className="stack">{stack}</ul>
     </div>
   );
