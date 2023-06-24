@@ -10,7 +10,7 @@ export default function Hero() {
         <p>Welcome to my portfolio!</p>
         <Link
           className="banner-button"
-          to="about-container"
+          to="about-wrapper"
           spy={true}
           smooth={true}
           duration={500}
