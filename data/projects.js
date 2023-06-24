@@ -1,4 +1,4 @@
-const project = {
+const projectTemplate = {
   title: "",
   image: "",
   description: "",
@@ -13,7 +13,7 @@ const portfolio = {
   description: "This website!",
   live: null,
   repo: "https://github.com/penguinboots/penguin-portfolio",
-  stack: ["vite", "react", "sass"]
+  stack: ["react", "sass", "vite"]
 }
 
 const mimikyu = {
@@ -22,7 +22,7 @@ const mimikyu = {
   description: "Capstone Project: A pokemon-themed roguelite game.",
   live: "https://mimikyus-day-off.vercel.app",
   repo: "https://github.com/penguinboots/poke-rogue",
-  stack: ["react", "next", "sass", "prisma"]
+  stack: ["react", "next", "node", "sass", "prisma"]
 }
 
 const shortly = {
@@ -31,7 +31,7 @@ const shortly = {
   description: "Frontend Mentor Challenge: URL Shortener.",
   live: "https://shortly-url-shortener-five.vercel.app",
   repo: "https://github.com/penguinboots/url-shortener",
-  stack: ["vite", "react", "sass"]
+  stack: ["react", "sass", "vite"]
 }
 
 const jungle = {
@@ -46,7 +46,7 @@ const jungle = {
 const scheduler = {
   title: "Interview Scheduler",
   image: "",
-  description: "Single-page React application with testing performed in Storybook, Jest, and Cypress.",
+  description: "Single-page React application to schedule interviews.",
   live: null,
   repo: "https://github.com/penguinboots/scheduler",
   stack: ["react", "storybook", "jest", "cypress"]
@@ -55,10 +55,10 @@ const scheduler = {
 const bytes = {
   title: "Bytes Restaurant",
   image: "",
-  description: "Midterm Group Project: A full-stack web app for a fictional robot-themed restaurant.",
+  description: "Midterm Group Project: A full-stack food-pickup app.",
   live: null,
   repo: "https://github.com/penguinboots/bytes-restaurant",
-  stack: ["ejs", "express", "sass", "postgresql"]
+  stack: ["ejs", "express", "node", "sass", "postgresql"]
 }
 
 const tweeter = {
