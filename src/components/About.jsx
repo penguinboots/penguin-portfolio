@@ -1,6 +1,6 @@
-import iconGithub from "../icon_github.svg";
-import iconLinkedIn from "../icon_linkedin.svg";
-import iconMail from "../icon_mail.svg";
+import iconGithub from "../assets/icon_github.svg";
+import iconLinkedIn from "../assets/icon_linkedin.svg";
+import iconMail from "../assets/icon_mail.svg";
 
 
 export default function About() {

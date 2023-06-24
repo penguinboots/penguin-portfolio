@@ -117,12 +117,12 @@ body {
 @media only screen and (min-width: 1025px) {
   section {
     height: 52rem;
-    max-width: 2000px;
     margin: auto;
   }
   .section-container {
     margin: auto;
     width: 85%;
+    max-width: 1400px;
     height: 85%;
     background-color: $light-pale-yellow;
     border-radius: 4rem;
@@ -157,6 +157,7 @@ button {
   background-color: rgb(254, 247, 230, 0.8);
   position: sticky;
   top: 0;
+  margin: auto;
 }
 
 .nav-bar {
@@ -166,6 +167,7 @@ button {
   margin: auto;
   font-family: $title-font;
   font-weight: 700;
+  max-width: 1800px;
 
   .left-nav {
     display: flex;
@@ -228,7 +230,6 @@ button {
       margin-right: 7.5%;
     }
   }
-  max-width: 2000px;
 }
 
 /**** Hamburger Menu ****/
@@ -294,6 +295,7 @@ button {
 /**** Hero ****/
 
 .hero-container {
+  max-width: 1900px;
   margin: auto;
   font-family: $title-font;
   .hero-text {
@@ -639,6 +641,25 @@ button {
 
 .skills-wrapper {
   background-color: $dark-yellow;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    li {
+      img {
+        width: 3rem;
+        height: 3rem;
+        margin: 0.5rem;
+      }
+    }
+  }
 }
 
 /**** Footer ****/
