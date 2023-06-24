@@ -51,13 +51,13 @@ export default function Navbar(props) {
             <li className="nav-divider">|</li>
             <li className="nav-item">
               <Link
-                to="contact-container"
+                to="skills-wrapper"
                 spy={true}
                 smooth={true}
                 duration={500}
                 offset={-convertRemToPixels(8)}
               >
-                Contact
+                Skills
               </Link>
             </li>
             <li className="nav-divider">|</li>

@@ -23,7 +23,7 @@ export default function About() {
               Explore my projects and let's collaborate on something
               extraordinary!
             </p>
-            <ul className="contact">
+            <ul className="contact-icons">
               <li>
                 <a href="https://github.com/penguinboots">
                   <img src={iconGithub} alt="github icon" />

@@ -72,6 +72,15 @@ body {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+.about-wrapper,
+.projects-wrapper,
+.skills-wrapper,
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /**** General - Responsive ****/
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -404,11 +413,7 @@ button {
 /**** About ****/
 
 .about-wrapper {
-  width: 100%;
   background-color: $dark-yellow;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .about {
@@ -424,7 +429,7 @@ button {
       margin: 1rem 0;
       hyphens: auto;
     }
-    .contact {
+    .contact-icons {
       display: flex;
       width: 100%;
       padding: 0;
@@ -501,10 +506,6 @@ button {
 
 /**** Projects ****/
 .projects-wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: auto;
 }
 .projects {
@@ -619,5 +620,37 @@ button {
         height: 50%;
       }
     }
+  }
+}
+
+/**** Contact ****/
+
+.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  background-color: $dark-yellow;
+}
+
+/**** Skills ****/
+
+.skills-wrapper {
+  background-color: $dark-yellow;
+}
+
+/**** Footer ****/
+
+.footer-wrapper {
+  background-color: $pale-yellow;
+  color: $light-brown;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .footer-container {
+    margin: auto;
   }
 }

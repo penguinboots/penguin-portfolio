@@ -5,9 +5,10 @@ import PropTypes from "prop-types";
 import { convertRemToPixels } from "../utils/helpers";
 
 export default function Menu(props) {
-  const { isOpen } = props;
+  const { isOpen, closeMenu } = props;
   Menu.propTypes = {
     isOpen: PropTypes.bool,
+    closeMenu: PropTypes.func
   };
 
   return (
@@ -26,6 +27,7 @@ export default function Menu(props) {
             smooth={true}
             duration={500}
             offset={-convertRemToPixels(6)}
+            onClick={closeMenu}
           >
             About
           </Link>
@@ -37,19 +39,21 @@ export default function Menu(props) {
             smooth={true}
             duration={500}
             offset={-convertRemToPixels(6)}
+            onClick={closeMenu}
           >
             Projects
           </Link>
         </li>
         <li className="nav-item">
           <Link
-            to="contact-container"
+            to="skills-wrapper"
             spy={true}
             smooth={true}
             duration={500}
             offset={-convertRemToPixels(6)}
+            onClick={closeMenu}
           >
-            Contact
+            Skills
           </Link>
         </li>
         <hr />
