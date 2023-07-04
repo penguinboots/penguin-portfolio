@@ -1,3 +1,10 @@
+import mimikyuImg from "../src/assets/projects/mimikyu.png"
+import bytesImg from "../src/assets/projects/bytes.png";
+import jungleImg from "../src/assets/projects/jungle.png";
+import schedulerImg from "../src/assets/projects/scheduler.png";
+import shortlyImg from "../src/assets/projects/shortly.png";
+import portfolioImg from "../src/assets/projects/portfolio.png"
+
 const projectTemplate = {
   title: "",
   image: "",
@@ -9,7 +16,7 @@ const projectTemplate = {
 
 const portfolio = {
   title: "Portfolio Website",
-  image: "",
+  image: portfolioImg,
   description: "This website!",
   live: null,
   repo: "https://github.com/penguinboots/penguin-portfolio",
@@ -18,7 +25,7 @@ const portfolio = {
 
 const mimikyu = {
   title: "Mimikyu's Day Off",
-  image: "",
+  image: mimikyuImg,
   description: "Capstone Project: A pokemon-themed roguelite game.",
   live: "https://mimikyus-day-off.vercel.app",
   repo: "https://github.com/penguinboots/poke-rogue",
@@ -27,7 +34,7 @@ const mimikyu = {
 
 const shortly = {
   title: "Shortly",
-  image: "",
+  image: shortlyImg,
   description: "Frontend Mentor Challenge: URL Shortener.",
   live: "https://shortly-url-shortener-five.vercel.app",
   repo: "https://github.com/penguinboots/url-shortener",
@@ -36,7 +43,7 @@ const shortly = {
 
 const jungle = {
   title: "Jungle",
-  image: "",
+  image: jungleImg,
   description: "A mini e-commerce app.",
   live: "",
   repo: "https://github.com/penguinboots/jungle-rails",
@@ -45,7 +52,7 @@ const jungle = {
 
 const scheduler = {
   title: "Interview Scheduler",
-  image: "",
+  image: schedulerImg,
   description: "Single-page React application to schedule interviews.",
   live: null,
   repo: "https://github.com/penguinboots/scheduler",
@@ -54,7 +61,7 @@ const scheduler = {
 
 const bytes = {
   title: "Bytes Restaurant",
-  image: "",
+  image: bytesImg,
   description: "Midterm Group Project: A full-stack food-pickup app.",
   live: null,
   repo: "https://github.com/penguinboots/bytes-restaurant",

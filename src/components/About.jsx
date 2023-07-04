@@ -2,6 +2,8 @@ import iconGithub from "../assets/icon_github.svg";
 import iconLinkedIn from "../assets/icon_linkedin.svg";
 import iconMail from "../assets/icon_mail.svg";
 
+import photo from "../assets/profile_photo.png"
+
 
 export default function About() {
   return (
@@ -41,7 +43,7 @@ export default function About() {
               </li>
             </ul>
           </div>
-          <div className="placeholder about-img">{`< 🚧 Under Construction 🚧 >`}</div>
+          <img className="about-img" src={photo}/>
         </div>
       </div>
     </section>

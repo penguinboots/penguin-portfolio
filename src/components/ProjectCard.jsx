@@ -12,7 +12,8 @@ export default function ProjectCard(props) {
 
   return (
     <div className="project-card">
-      <div className="placeholder project-img">{`< 🚧 Under Construction 🚧 >`}</div>
+      <div className="project-img"><img src={project.image} /></div>
+      {/* <div className="placeholder project-img">{`< 🚧 Under Construction 🚧 >`}</div> */}
       <div className="title-box">
         <h3>{project.title}</h3>
         <ul className="links">

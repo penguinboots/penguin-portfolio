@@ -453,8 +453,8 @@ button {
       flex-direction: column;
       .about-img {
         order: 0;
-        height: 12rem;
-        width: 90%;
+        width: 60%;
+        margin: 2rem;
       }
       .about-text {
         order: 1;
@@ -475,8 +475,7 @@ button {
       }
       .about-img {
         order: 0;
-        height: 15rem;
-        width: 70%;
+        width: 50%;
         margin: 1rem;
       }
     }
@@ -498,9 +497,9 @@ button {
       }
       .about-img {
         order: 1;
-        height: 90%;
-        width: 30%;
+        width: 35%;
         margin: 1rem;
+        align-self: flex-start;
       }
     }
   }
@@ -534,9 +533,15 @@ button {
       height: 40%;
       min-height: 40%;
       width: 100%;
-      border-radius: 0.3rem;
+      border-radius: 1rem;
       align-self: center;
       margin-bottom: 0.8rem;
+      overflow: hidden;
+      display: flex;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
     .title-box {
       display: flex;
@@ -566,6 +571,7 @@ button {
       font-weight: 400;
       font-size: 0.9rem;
       margin: 0.5rem 0;
+      flex-grow: 4;
     }
     .stack {
       display: flex;
@@ -631,10 +637,30 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: auto;
+  margin: 2rem;
 }
 
 .contact {
   background-color: $dark-yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .contact-icons {
+    display: flex;
+    padding: 0;
+    margin-bottom: 5rem;
+    gap: 1rem;
+    li {
+      a {
+        width: 2.5rem;
+      }
+      display: flex;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 2.5rem;
+    }
+  }
 }
 
 /**** Skills ****/
